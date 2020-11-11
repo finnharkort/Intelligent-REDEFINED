@@ -3,6 +3,15 @@
   margin: 0;
   font-family: "Alata";
   font-weight: 300;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 5rem;
 }
 
 p {
@@ -11,9 +20,17 @@ p {
 
 header {
   position: fixed;
+  top: 0;
   width: 100vw;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  z-index: 666;
   background-color: black;
-  grid-area: header;
+}
+
+header h4,
+header h5 {
+  color: white;
 }
 
 .flex-default-row {
@@ -33,19 +50,24 @@ header .container-row {
 
 .start,
 .grid-container {
+  padding: 2vw;
+  padding-top: 6.2rem;
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "header header header header header"
-    "redefined redefined opening opening now"
-    "redefined redefined opening opening now"
-    "redefined redefined opening opening now"
-    "redefined redefined events events now"
-    "tours tours events events now"
-    "tours tours events events now"
-    "tours tours events events now"
-    "tours tours events events now";
+    "redefined redefined opening opening opening now"
+    "redefined redefined opening opening opening now"
+    "redefined redefined opening opening opening now"
+    "redefined redefined events events events now"
+    "redefined redefined events events events now"
+    "tours tours events events events now"
+    "tours tours events events events now"
+    "tours tours events events events now"
+    "tours tours events events events now"
+    "tours tours events events events now";
   gap: 2vw;
   height: 100vh;
+  width: 100vw;
 }
 
 .default-box {
@@ -54,10 +76,12 @@ header .container-row {
 
 #redefined {
   grid-area: redefined;
+  margin-top: 2vw;
 }
 
 #now {
   grid-area: now;
+  margin-top: 2vw;
 }
 
 #tours {
@@ -69,5 +93,20 @@ header .container-row {
 }
 
 #opening {
+  margin-top: 2vw;
   grid-area: opening;
+}
+
+#re {
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+
+.start .text {
+  position: relative;
+}
+
+#redefined .text {
+  left: 3rem;
+  bottom: 2.8 rem;
 }
