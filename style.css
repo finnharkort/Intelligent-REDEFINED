@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Alata";
+  font-weight: 300;
+}
+
+p {
+  font-family: "Chivo";
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  background-color: black;
+  grid-area: header;
+}
+
+.flex-default-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header .container-row {
+  width: 20vw;
+}
+
+.start,
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "redefined redefined opening opening now"
+    "redefined redefined opening opening now"
+    "redefined redefined opening opening now"
+    "redefined redefined events events now"
+    "tours tours events events now"
+    "tours tours events events now"
+    "tours tours events events now"
+    "tours tours events events now";
+  gap: 2vw;
+  height: 100vh;
+}
+
+.default-box {
+  background-color: #c4c4c4;
+}
+
+#redefined {
+  grid-area: redefined;
+}
+
+#now {
+  grid-area: now;
+}
+
+#tours {
+  grid-area: tours;
+}
+
+#events {
+  grid-area: events;
+}
+
+#opening {
+  grid-area: opening;
+}
