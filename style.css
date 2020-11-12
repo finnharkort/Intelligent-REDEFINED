@@ -81,13 +81,12 @@ header h5 {
     "tours tours events events now"
     "tours tours events events now";
   gap: 2vw;
-  max-height: 60vw;
   min-height: 43.1vw;
   height: 100vh;
   width: 100vw;
 }
 
-.absolute-box {
+.default-box {
   background-color: #c4c4c4;
   position: relative;
 }
@@ -101,6 +100,25 @@ header h5 {
 #now {
   grid-area: now;
   margin-top: 2vw;
+  align-items: flex-start;
+}
+
+#now img {
+  width: 65%;
+}
+
+#now h2 {
+  align-self: flex-end;
+  margin-right: 1vw;
+}
+
+#now .text {
+  position: relative;
+  left: 1vw;
+}
+
+#now .heading-container {
+  position: relative;
 }
 
 #tours {
@@ -113,10 +131,9 @@ header h5 {
   justify-content: flex-end;
 }
 
-.eventsHeading {
+#events .heading-container {
   top: 0;
-  left: 0;
-  margin: 1vw;
+  left: 1vw;
 }
 
 #events img {
@@ -137,12 +154,12 @@ header h5 {
   right: 0.7vw;
 }
 
-#redefinedHeading {
+#redefined .heading-container {
   top: -0.7vw;
   left: 0.6vw;
 }
 
-#toursHeading {
+#tours .heading-container {
   right: 3vw;
   top: 2vw;
 }
@@ -167,24 +184,64 @@ header h5 {
   display: inline-block;
 }
 
-.absolute-box .button {
+.default-box .button {
   margin: 1vw;
   z-index: 1;
 }
 
-.absolute-box > * {
+.default-box .heading-container {
   position: absolute;
 }
 
-.start-grid-container .absolute-box {
+.start-grid-container .default-box {
   align-items: flex-end;
-}
-
-.start-grid-container .absolute-box img,
-.start-grid-container .absolute-box .button {
-  position: relative;
 }
 
 #events .button {
   bottom: 0;
+}
+
+/* @media (min-height: 60vw) {
+  #redefined img {
+    height: 26vw;
+  }
+} */
+
+@media (max-width: 80rem) {
+  .start-grid-container {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "opening opening now"
+      "opening opening now"
+      "opening opening now"
+      "events events now"
+      "events events now"
+      "events events now"
+      "events events now"
+      "events events now"
+      "events events now"
+      "redefined redefined redefined"
+      "redefined redefined redefined"
+      "redefined redefined redefined"
+      "redefined redefined redefined"
+      "redefined redefined redefined"
+      "tours tours tours"
+      "tours tours tours"
+      "tours tours tours"
+      "tours tours tours";
+    height: 130vw;
+    gap: 4vw;
+    margin-top: 4.5vw;
+    padding: 4vw;
+  }
+  #redefined {
+    margin: 0;
+  }
+  h2 {
+    font-size: 10vw;
+  }
+  p {
+    font-size: 2vw;
+  }
 }
