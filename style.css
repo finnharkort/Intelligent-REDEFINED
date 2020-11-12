@@ -14,6 +14,10 @@ h1 {
   font-size: 5vw;
 }
 
+h2 {
+  font-size: 4vw;
+}
+
 h3 {
   font-size: 3vw;
 }
@@ -28,6 +32,7 @@ h5 {
 
 p {
   font-family: "Chivo";
+  font-size: 1vw;
 }
 
 header {
@@ -43,59 +48,52 @@ header {
 header h5 {
   margin-left: 3vw;
   letter-spacing: 0.4vw;
-}
-
-header h4,
-header h5 {
   color: white;
 }
 
 .flex-default-row {
+  flex-direction: row;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container-row {
+
+.flex-default-column {
+  flex-direction: column;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
-header .container-row {
-  width: 20vw;
-}
-
-.start,
-.grid-container {
+.start-grid-container {
   padding: 2vw;
   padding-top: 6.2vw;
   display: grid;
-  grid-template-rows: 4fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
+    "redefined redefined opening opening now"
+    "redefined redefined opening opening now"
     "redefined redefined opening opening now"
     "redefined redefined events events now"
     "redefined redefined events events now"
     "tours tours events events now"
     "tours tours events events now"
     "tours tours events events now"
-    "tours tours events events now"
     "tours tours events events now";
   gap: 2vw;
-  min-height: 35vw;
   height: 100vh;
   width: 100vw;
 }
 
-.default-box {
+.absolute-box {
   background-color: #c4c4c4;
   position: relative;
 }
 
 #redefined {
-  position: relative;
   grid-area: redefined;
   margin-top: 2vw;
+  justify-content: flex-end;
 }
 
 #now {
@@ -105,6 +103,7 @@ header .container-row {
 
 #tours {
   grid-area: tours;
+  justify-content: flex-start;
 }
 
 #events {
@@ -120,36 +119,32 @@ header .container-row {
   display: inline-block;
   position: relative;
   transform: rotate(-90deg);
-}
-
-.start .text {
-  position: relative;
-}
-
-#redefined img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-}
-
-#tours img {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-}
-
-#reText {
-  position: relative;
   bottom: 2vw;
   right: 0.7vw;
 }
 
-#redefined .flex-default-column {
-  position: absolute;
-  top: 0;
-  left: 1.3vw;
+#redefinedHeading {
+  top: -0.7vw;
+  left: 0.6vw;
+}
+
+#toursHeading {
+  right: 3vw;
+  top: 2vw;
+}
+
+#redefined img {
+  height: 100%;
+}
+
+#redefined .text {
+  position: relative;
+  left: 5vw;
+  bottom: 7vw;
+}
+
+#tours img {
+  height: 100%;
 }
 
 .button {
@@ -158,18 +153,24 @@ header .container-row {
   display: inline-block;
 }
 
-#redefined .button {
-  position: absolute;
-  right: 14.3vw;
-  bottom: 1vw;
+.absolute-box .button {
+  margin: 1vw;
+  z-index: 1;
 }
 
-#tours {
-  justify-content: flex-end;
+.absolute-box > * {
+  position: absolute;
 }
 
-#tours .flex-default-column {
-  position: absolute;
-  top: 1vw;
-  right: 15vw;
+.start-grid-container .absolute-box {
+  align-items: flex-end;
+}
+
+.start-grid-container .absolute-box img,
+.start-grid-container .absolute-box .button {
+  position: relative;
+}
+
+#events .button {
+  bottom: 0;
 }

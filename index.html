@@ -16,11 +16,11 @@
   </head>
   <body>
     <header class="flex-default-row">
-      <div class="container-column">
+      <div class="flex-default-column">
         <h5>INT</h5>
         <h5>ELLIGENT</h5>
       </div>
-      <nav class="container-row">
+      <nav class="flex-default-row">
         <div class="button">
           <a href=""><span></span></a>
           <h5>TICKETS</h5>
@@ -29,17 +29,16 @@
         <h5><a href="">CONTACT</a></h5>
       </nav>
     </header>
-    <div class="start grid-container">
-      <div class="grid-item default-box flex-default-row" id="redefined">
-        <div class="flex-default-column">
+    <div class="start-grid-container">
+      <!-- REDEFINED -->
+      <div class="grid-item absolute-box flex-default-row" id="redefined">
+        <div id="redefinedHeading">
           <h1 id="defined">DEFINED</h1>
-          <div class="flex-default-row" id="reText">
-            <h1 id="re">RE</h1>
-            <div class="text">
-              <p>Intelligent REDEFINED. is an</p>
-              <p>art museum located in</p>
-              <p>central Stockholm.</p>
-            </div>
+          <h1 id="re">RE</h1>
+          <div class="text">
+            <p>Intelligent REDEFINED. is an</p>
+            <p>art museum located in</p>
+            <p>central Stockholm.</p>
           </div>
         </div>
         <div class="button">
@@ -48,24 +47,26 @@
         </div>
         <img src="Redefined STart.jpg" alt="" />
       </div>
+      <!-- OPENING -->
       <div class="grid-item flex-default-column" id="opening">
-        <div class="container-row">
+        <div class="flex-default-row">
           <h4>MON-FRI</h4>
           <hr />
           <h4>11-19</h4>
         </div>
-        <div class="container-row">
+        <div class="flex-default-row">
           <h4>SATRUDAY</h4>
           <hr />
           <h4>12-16</h4>
         </div>
-        <div class="container-row">
+        <div class="flex-default-row">
           <h4>SUNDAY</h4>
           <hr />
           <h4>CLOSED</h4>
         </div>
       </div>
-      <div class="grid-item default-box" id="now">
+      <!-- NOW -->
+      <div class="grid-item absolute-box" id="now">
         <img src="" alt="" />
         <h2>NOW.</h2>
         <div class="text">
@@ -78,9 +79,10 @@
           <h5>MORE INFO</h5>
         </div>
       </div>
-      <div class="grid-item default-box flex-default-row" id="tours">
+      <!-- TOURS -->
+      <div class="grid-item absolute-box flex-default-row" id="tours">
         <img src="Tours Start.jpg" alt="" />
-        <div class="flex-default-column">
+        <div id="toursHeading">
           <h3>TOURS.</h3>
           <div class="text">
             <p>The best way to</p>
@@ -93,7 +95,8 @@
           <h5>BOOK A TOUR</h5>
         </div>
       </div>
-      <div class="grid-item default-box" id="events">
+      <!-- EVENTS -->
+      <div class="grid-item absolute-box" id="events">
         <h2>EVENTS.</h2>
         <div class="text">
           <p>Workshops and other</p>
