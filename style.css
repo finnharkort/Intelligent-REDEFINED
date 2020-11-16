@@ -6,8 +6,25 @@
   box-sizing: border-box;
 }
 
+#noFace {
+  width: 10vw;
+  position: relative;
+  right: 5vw;
+}
+.hidden {
+  display: none;  
+}
+
+img {
+  width: 15vw;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1 {
@@ -33,6 +50,15 @@ h5 {
 p {
   font-family: "Chivo";
   font-size: 1vw;
+}
+
+#title {
+  height: 100vh;
+  justify-content: space-around;
+}
+
+#title .flex-default-row {
+  align-items: flex-end;
 }
 
 header {
@@ -82,7 +108,6 @@ header h5 {
     "tours tours events events now";
   gap: 2vw;
   min-height: 43.1vw;
-  height: 100vh;
   width: 100vw;
 }
 
@@ -201,47 +226,16 @@ header h5 {
   bottom: 0;
 }
 
-/* @media (min-height: 60vw) {
+@media (min-height: 60vw) {
   #redefined img {
     height: 26vw;
   }
-} */
+}
 
-@media (max-width: 80rem) {
-  .start-grid-container {
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "opening opening now"
-      "opening opening now"
-      "opening opening now"
-      "events events now"
-      "events events now"
-      "events events now"
-      "events events now"
-      "events events now"
-      "events events now"
-      "redefined redefined redefined"
-      "redefined redefined redefined"
-      "redefined redefined redefined"
-      "redefined redefined redefined"
-      "redefined redefined redefined"
-      "tours tours tours"
-      "tours tours tours"
-      "tours tours tours"
-      "tours tours tours";
-    height: 130vw;
-    gap: 4vw;
-    margin-top: 4.5vw;
-    padding: 4vw;
-  }
-  #redefined {
-    margin: 0;
-  }
-  h2 {
-    font-size: 10vw;
-  }
-  p {
-    font-size: 2vw;
-  }
+#grid-link {
+  transition: 1s;
+}
+
+#grid-link:hover {
+  background-color: red;
 }
