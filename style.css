@@ -6,19 +6,6 @@
   box-sizing: border-box;
 }
 
-#noFace {
-  width: 10vw;
-  position: relative;
-  right: 5vw;
-}
-.hidden {
-  display: none;  
-}
-
-img {
-  width: 15vw;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -26,6 +13,8 @@ html {
 body {
   overflow: hidden;
 }
+
+/* misc */
 
 h1 {
   font-size: 5vw;
@@ -49,33 +38,52 @@ h5 {
 
 p {
   font-family: "Chivo";
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 
-#title {
-  height: 100vh;
-  justify-content: space-around;
-}
-
-#title .flex-default-row {
-  align-items: flex-end;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  padding-top: 1.8vw;
-  padding-bottom: 1.8vw;
-  z-index: 666;
-  background-color: black;
-}
-
-header h5 {
-  margin-left: 3vw;
-  letter-spacing: 0.4vw;
+a {
+  text-decoration: none;
   color: white;
 }
+
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: url("empty.gif");
+}
+
+.button {
+  background-color: white;
+  padding: 0.3rem 0.9rem;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+#noFace {
+  width: 10vw;
+  position: relative;
+  right: 5vw;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1vw 2vw;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1vw;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* flex */
 
 .flex-default-row {
   flex-direction: row;
@@ -90,9 +98,11 @@ header h5 {
   justify-content: space-between;
 }
 
+/* grids */
+
 .start-grid-container {
-  padding: 2vw;
-  padding-top: 6.2vw;
+  padding: 2rem;
+  padding-top: 7rem;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -106,21 +116,139 @@ header h5 {
     "tours tours events events now"
     "tours tours events events now"
     "tours tours events events now";
-  gap: 2vw;
-  min-height: 43.1vw;
+  gap: 2rem;
+  min-height: 45vw;
   width: 100vw;
+  height: 100vh;
 }
+
+/* header */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  padding: 1.8rem;
+  z-index: 666;
+  background-color: black;
+}
+
+header h5 {
+  font-size: 1rem;
+}
+
+header .flex-default-row {
+  width: 25rem;
+}
+
+header .flex-default-column h5 {
+  letter-spacing: 0.4rem;
+  color: white;
+}
+
+/* #title */
+
+#title {
+  justify-content: space-around;
+  justify-content: center;
+}
+
+.hidden {
+  transition: 2s;
+  height: 0vh;
+  position: relative;
+  bottom: 13vw;
+  visibility: hidden;
+  margin-top: 0;
+}
+
+.visible {
+  height: 100vh;
+  position: relative;
+  bottom: 0;
+  margin-top: 3vw;
+}
+
+#title ._1 {
+  width: 20vw;
+}
+
+#title ._2 {
+  width: 15vw;
+}
+
+#title .flex-default-row {
+  align-items: flex-end;
+}
+
+#title button {
+  position: relative;
+  top: 19vw;
+  right: 5.2vw;
+}
+
+/* .default-box */
 
 .default-box {
   background-color: #c4c4c4;
   position: relative;
 }
 
+.default-box .button {
+  margin: 1rem;
+}
+
+.default-box .heading-container {
+  position: absolute;
+}
+
+.start-grid-container .default-box {
+  align-items: flex-end;
+}
+
+/* START-ID */
+
+/* #redefined */
+
 #redefined {
   grid-area: redefined;
   margin-top: 2vw;
   justify-content: flex-end;
 }
+
+#redefined .heading-container {
+  top: -0.7vw;
+  left: 0.6vw;
+}
+
+#redefined img {
+  height: 100%;
+}
+
+#redefined .text {
+  position: relative;
+  left: 5vw;
+  bottom: 7vw;
+}
+
+#re {
+  display: inline-block;
+  position: relative;
+  transform: rotate(-90deg);
+  bottom: 2vw;
+  right: 0.7vw;
+}
+
+/* #opening */
+
+#opening {
+  margin-top: 2vw;
+  grid-area: opening;
+}
+
+/* #now */
 
 #now {
   grid-area: now;
@@ -146,42 +274,11 @@ header h5 {
   position: relative;
 }
 
+/* #tours */
+
 #tours {
   grid-area: tours;
   justify-content: flex-start;
-}
-
-#events {
-  grid-area: events;
-  justify-content: flex-end;
-}
-
-#events .heading-container {
-  top: 0;
-  left: 1vw;
-}
-
-#events img {
-  width: 15vw;
-  max-width: 20vw;
-}
-
-#opening {
-  margin-top: 2vw;
-  grid-area: opening;
-}
-
-#re {
-  display: inline-block;
-  position: relative;
-  transform: rotate(-90deg);
-  bottom: 2vw;
-  right: 0.7vw;
-}
-
-#redefined .heading-container {
-  top: -0.7vw;
-  left: 0.6vw;
 }
 
 #tours .heading-container {
@@ -189,53 +286,94 @@ header h5 {
   top: 2vw;
 }
 
-#redefined img {
-  height: 100%;
-}
-
-#redefined .text {
-  position: relative;
-  left: 5vw;
-  bottom: 7vw;
-}
-
 #tours img {
   height: 100%;
 }
 
-.button {
-  background-color: white;
-  padding: 0.3vw 0.9vw;
-  display: inline-block;
+/* #events */
+
+#events {
+  grid-area: events;
+  justify-content: flex-end;
 }
 
-.default-box .button {
-  margin: 1vw;
-  z-index: 1;
-}
-
-.default-box .heading-container {
-  position: absolute;
-}
-
-.start-grid-container .default-box {
-  align-items: flex-end;
+#events img {
+  width: 15vw;
+  max-width: 20vw;
 }
 
 #events .button {
   bottom: 0;
 }
 
+#events .heading-container {
+  top: 0;
+  left: 1vw;
+}
+
+.bodyHidden {
+  transition: 2s;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/**/
+
 @media (min-height: 60vw) {
   #redefined img {
-    height: 26vw;
+    width: 17vw;
+    height: auto;
   }
 }
 
-#grid-link {
-  transition: 1s;
-}
+@media (max-width: 100rem) {
+  .start-grid-container {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "redefined redefined opening opening"
+      "redefined redefined opening opening"
+      "redefined redefined opening opening"
+      "redefined redefined events events"
+      "redefined redefined events events"
+      "tours tours events events"
+      "tours tours events events"
+      "tours tours events events"
+      "tours tours events events"
+      "now now now now";
+    height: 85rem;
+  }
+  #now {
+    margin: 0;
+    height: 20rem;
+    flex-direction: row;
+  }
+  #now img {
+    height: 100%;
+    width: auto;
+  }
+  h1 {
+    font-size: 7vw;
+  }
 
-#grid-link:hover {
-  background-color: red;
+  h2 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 5rem;
+  }
+
+  h4 {
+    font-size: 3rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-family: "Chivo";
+    font-size: 1.5rem;
+  }
 }
