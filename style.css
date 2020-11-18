@@ -255,6 +255,7 @@ header .flex-default-column h5 {
 /* #now */
 
 #now {
+  position: relative;
   grid-area: now;
   margin-top: 1.6rem;
   align-items: flex-start;
@@ -370,8 +371,7 @@ header .flex-default-column h5 {
     right: 0.6rem;
   }
   #redefined .text {
-    position: relative;
-    right: 3rem;
+    right: 2rem;
   }
   #redefined h1 {
     font-size: 7rem;
@@ -406,5 +406,120 @@ header .flex-default-column h5 {
   }
   #redefined img {
     width: 14vw;
+  }
+}
+
+@media (max-width: 64rem) {
+  header .flex-default-row {
+    display: none;
+  }
+  .start-grid-container {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "redefined redefined"
+      "redefined redefined"
+      "opening opening"
+      "events events"
+      "events events"
+      "tours tours"
+      "now now";
+    height: 120rem;
+  }
+  #redefined img {
+    height: 100%;
+    width: auto;
+  }
+  #redefined .text {
+    left: 1rem;
+  }
+  #redefined h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 2.5rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+  #redefined .text {
+    top: 3vw;
+  }
+}
+@media (max-width: 56rem) {
+  #now img {
+    position: absolute;
+    top: 0;
+    width: 9rem;
+    height: auto;
+  }
+  #now .text {
+    position: absolute;
+    width: 20rem;
+    font-size: 1.2rem;
+    top: 0;
+    left: 9.5rem;
+    margin: 1rem;
+  }
+  #now .button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+@media (max-width: 45rem) {
+  #redefined img {
+    width: 30vw;
+    height: auto;
+  }
+}
+@media (max-width: 514px) {
+  #now p {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 425px) {
+  .start-grid-container {
+    height: 100rem;
+  }
+  #redefined h1 {
+    font-size: 18vw;
+  }
+
+  h2 {
+    font-size: 15vw;
+  }
+
+  h3 {
+    font-size: 12vw;
+  }
+
+  h4 {
+    font-size: 7vw;
+  }
+
+  h5 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 6vw;
+  }
+  #now img {
+    width: 30vw;
   }
 }
