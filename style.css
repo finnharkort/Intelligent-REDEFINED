@@ -140,7 +140,7 @@ header h5 {
 }
 
 header .flex-default-row {
-  width: 25rem;
+  width: 30rem;
 }
 
 header .flex-default-column h5 {
@@ -214,37 +214,41 @@ header .flex-default-column h5 {
 
 #redefined {
   grid-area: redefined;
-  margin-top: 2vw;
+  margin-top: 1.6rem;
   justify-content: flex-end;
 }
 
 #redefined .heading-container {
-  top: -0.7vw;
-  left: 0.6vw;
+  top: -0.7rem;
+  left: 0.6rem;
+}
+
+#redefined .flex-default-row {
+  position: relative;
+  bottom: 2vw;
+  right: 0.6vw;
+}
+
+#redefined .text {
+  position: relative;
+  right: 0.8vw;
+  top: 0.5vw;
 }
 
 #redefined img {
   height: 100%;
 }
 
-#redefined .text {
-  position: relative;
-  left: 5vw;
-  bottom: 7vw;
-}
-
 #re {
   display: inline-block;
   position: relative;
   transform: rotate(-90deg);
-  bottom: 2vw;
-  right: 0.7vw;
 }
 
 /* #opening */
 
 #opening {
-  margin-top: 2vw;
+  margin-top: 1.6rem;
   grid-area: opening;
 }
 
@@ -252,7 +256,7 @@ header .flex-default-column h5 {
 
 #now {
   grid-area: now;
-  margin-top: 2vw;
+  margin-top: 1.6rem;
   align-items: flex-start;
 }
 
@@ -290,6 +294,11 @@ header .flex-default-column h5 {
   height: 100%;
 }
 
+#tours .text {
+  position: relative;
+  left: 1rem;
+}
+
 /* #events */
 
 #events {
@@ -319,13 +328,6 @@ header .flex-default-column h5 {
 
 /**/
 
-@media (min-height: 60vw) {
-  #redefined img {
-    width: 17vw;
-    height: auto;
-  }
-}
-
 @media (max-width: 100rem) {
   .start-grid-container {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -352,8 +354,27 @@ header .flex-default-column h5 {
     height: 100%;
     width: auto;
   }
-  h1 {
-    font-size: 7vw;
+  #now h2 {
+    margin: 1rem;
+  }
+  #now .text {
+    top: 2rem;
+  }
+  #redefined img {
+    width: 16vw;
+    height: auto;
+  }
+  #redefined .flex-default-row {
+    position: relative;
+    bottom: 2.3rem;
+    right: 0.6rem;
+  }
+  #redefined .text {
+    position: relative;
+    right: 3rem;
+  }
+  #redefined h1 {
+    font-size: 7rem;
   }
 
   h2 {
@@ -375,5 +396,15 @@ header .flex-default-column h5 {
   p {
     font-family: "Chivo";
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 80rem) {
+  #tours img {
+    width: 30%;
+    height: auto;
+  }
+  #redefined img {
+    width: 14vw;
   }
 }
