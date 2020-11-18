@@ -327,6 +327,14 @@ header .flex-default-column h5 {
   overflow-y: visible;
 }
 
+footer {
+  width: 100vw;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 5rem;
+}
+
 /**/
 
 @media (max-width: 100rem) {
@@ -390,7 +398,7 @@ header .flex-default-column h5 {
   }
 
   h5 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   p {
@@ -459,6 +467,11 @@ header .flex-default-column h5 {
   #redefined .text {
     top: 3vw;
   }
+  #events img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+  }
 }
 @media (max-width: 56rem) {
   #now img {
@@ -492,12 +505,37 @@ header .flex-default-column h5 {
     font-size: 4vw;
   }
 }
+@media (max-width: 616px) {
+  #events img {
+    width: 30vw;
+    height: auto;
+  }
+}
 @media (max-width: 425px) {
+  html {
+    height: 90rem;
+  }
   .start-grid-container {
-    height: 100rem;
+    height: 90rem;
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 6rem;
   }
   #redefined h1 {
     font-size: 18vw;
+  }
+  #redefined .text {
+    top: 2rem;
+  }
+  #redefined img {
+    display: none;
+  }
+  #tours {
+    height: 13rem;
+  }
+  #tours .heading-container {
+    position: absolute;
+    left: 0;
   }
 
   h2 {
@@ -519,7 +557,19 @@ header .flex-default-column h5 {
   p {
     font-size: 6vw;
   }
-  #now img {
-    width: 30vw;
+  #tours img {
+    display: none;
+  }
+  #tours .flex-default-row {
+    position: absolute;
+    left: 0;
+  }
+}
+@media (max-width: 320px) {
+  #now .text {
+    position: absolute;
+    left: 9rem;
+    bottom: 1rem;
+    width: 5rem;
   }
 }
