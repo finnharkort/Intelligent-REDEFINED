@@ -90,6 +90,11 @@ button {
   bottom: 5rem;
 }
 
+.button:hover {
+  position: relative !important;
+  bottom: 0.5vw !important;
+}
+
 /* flex */
 
 .flex-default-row {
@@ -489,6 +494,10 @@ footer {
 
 .toursBody p {
   font-size: 2rem;
+}
+
+#Notickets {
+  margin-top: 10rem;
 }
 
 /**/
