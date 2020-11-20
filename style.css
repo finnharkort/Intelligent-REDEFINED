@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.startBody {
   overflow: hidden;
 }
 
@@ -36,7 +36,7 @@ h5 {
   font-size: 1.2vw;
 }
 
-p {
+.startBody p {
   font-family: "Chivo";
   font-size: 1.2vw;
 }
@@ -57,8 +57,8 @@ span {
 }
 
 .button {
+  padding: 0.5rem 0.9rem;
   background-color: white;
-  padding: 0.3rem 0.9rem;
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -96,6 +96,19 @@ button {
   flex-direction: column;
   display: flex;
   justify-content: space-between;
+}
+
+.flex-reversed-column {
+  flex-direction: column-reverse;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-reversed-row {
+  flex-direction: row-reverse;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* grids */
@@ -136,7 +149,7 @@ header {
 }
 
 header h5 {
-  font-size: 1rem;
+  font-size: 1.5rem !important;
 }
 
 header .flex-default-row {
@@ -335,7 +348,74 @@ footer {
   height: 5rem;
 }
 
+.ticketsBody #ticketsContainer {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100vw;
+  margin-top: 9rem;
+  row-gap: 5vw;
+}
+
+.ticketsBody {
+  overflow-x: hidden;
+}
+
+.ticketsBody .flex-default-column {
+  justify-content: flex-start;
+}
+
+.ticketsBody .headingContainer {
+  margin: 2vw;
+}
+
+.ticketsBody .default-box {
+  width: 30%;
+  height: 75vh;
+}
+
+.ticketsBody img {
+  width: 50%;
+  margin-top: 2vw;
+}
+
+#ticketsContainer .flex-default-row {
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+
+.ticketsBody footer {
+  margin-top: 4vw;
+}
+
+.ticketsBody .default-box .button {
+  padding: 1vw 2vw;
+}
+
+.ticketsBody p {
+  font-size: 1.2vw;
+}
+
+.ticketsBody .button h5 {
+  font-size: 1.2vw;
+  white-space: nowrap;
+}
+
 /**/
+
+@media (max-width: 769px) {
+  .ticketsBody .default-box {
+    width: 40%;
+    height: 30rem;
+  }
+  .ticketsBody h3 {
+    font-size: 7vw;
+  }
+  .ticketsBody p {
+    font-size: 1.8vw;
+  }
+}
 
 @media (max-width: 100rem) {
   .start-grid-container {
@@ -385,23 +465,23 @@ footer {
     font-size: 7rem;
   }
 
-  h2 {
+  .startBody h2 {
     font-size: 6rem;
   }
 
-  h3 {
+  .startBody h3 {
     font-size: 5rem;
   }
 
-  h4 {
+  .startBody h4 {
     font-size: 3rem;
   }
 
-  h5 {
+  .startBody h5 {
     font-size: 1.6rem;
   }
 
-  p {
+  .startBody p {
     font-family: "Chivo";
     font-size: 1.5rem;
   }
@@ -418,9 +498,6 @@ footer {
 }
 
 @media (max-width: 64rem) {
-  header .flex-default-row {
-    display: none;
-  }
   .start-grid-container {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -445,23 +522,23 @@ footer {
     font-size: 5rem;
   }
 
-  h2 {
+  .startBody h2 {
     font-size: 3rem;
   }
 
-  h3 {
+  .startBody h3 {
     font-size: 2rem;
   }
 
-  h4 {
+  .startBody h4 {
     font-size: 2.5rem;
   }
 
-  h5 {
+  .startBody .button h5 {
     font-size: 1.5rem;
   }
 
-  p {
+  .startBody p {
     font-size: 1.5rem;
   }
   #redefined .text {
@@ -495,6 +572,9 @@ footer {
   }
 }
 @media (max-width: 45rem) {
+  header .flex-default-row {
+    display: none;
+  }
   #redefined img {
     width: 30vw;
     height: auto;
@@ -511,7 +591,31 @@ footer {
     height: auto;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 426px) {
+  .ticketsBody .default-box {
+    width: 80%;
+    height: 130vw;
+  }
+  .ticketsBody img {
+    width: 50%;
+  }
+
+  .ticketsBody h3 {
+    font-size: 17vw;
+  }
+
+  .ticketsBody .button h5 {
+    font-size: 5vw;
+  }
+
+  .ticketsBody footer h5 {
+    font-size: 5vw;
+  }
+
+  .ticketsBody p {
+    font-size: 5vw;
+  }
+
   html {
     height: 90rem;
   }
@@ -538,23 +642,23 @@ footer {
     left: 0;
   }
 
-  h2 {
+  .startBody h2 {
     font-size: 15vw;
   }
 
-  h3 {
+  .startBody h3 {
     font-size: 12vw;
   }
 
-  h4 {
+  .startBody h4 {
     font-size: 7vw;
   }
 
-  h5 {
+  .startBody h5 {
     font-size: 4vw;
   }
 
-  p {
+  .startBody p {
     font-size: 6vw;
   }
   #tours img {
