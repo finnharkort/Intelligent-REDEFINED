@@ -37,8 +37,11 @@ h5 {
 }
 
 .startBody p {
-  font-family: "Chivo";
   font-size: 1.2vw;
+}
+
+p {
+  font-family: "Chivo";
 }
 
 a {
@@ -62,6 +65,7 @@ span {
   display: inline-block;
   position: relative;
   z-index: 1;
+  width: fit-content;
 }
 
 #noFace {
@@ -72,15 +76,18 @@ span {
 
 button {
   display: inline-block;
-  border: none;
   padding: 1vw 2vw;
+  width: fit-content;
+  border: none;
   margin: 0;
+  font-size: 2vw;
   text-decoration: none;
-  font-size: 1vw;
   cursor: pointer;
   text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
+  position: absolute;
+  bottom: 5rem;
 }
 
 /* flex */
@@ -166,6 +173,7 @@ header .flex-default-column h5 {
 #title {
   justify-content: space-around;
   justify-content: center;
+  position: relative;
 }
 
 .hidden {
@@ -185,21 +193,19 @@ header .flex-default-column h5 {
 }
 
 #title ._1 {
-  width: 20vw;
+  width: 12rem;
 }
 
 #title ._2 {
-  width: 15vw;
+  width: 9rem;
 }
 
 #title .flex-default-row {
   align-items: flex-end;
 }
 
-#title button {
-  position: relative;
-  top: 19vw;
-  right: 5.2vw;
+#title h1 {
+  font-size: 5rem;
 }
 
 /* .default-box */
@@ -370,7 +376,8 @@ footer {
 
 .ticketsBody .default-box {
   width: 30%;
-  height: 75vh;
+  height: 80vh;
+  min-height: 35vw;
 }
 
 .ticketsBody img {
@@ -380,7 +387,7 @@ footer {
 
 #ticketsContainer .flex-default-row {
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: absolute;
   bottom: 0;
 }
@@ -389,17 +396,99 @@ footer {
   margin-top: 4vw;
 }
 
-.ticketsBody .default-box .button {
+.subSite .default-box .button {
   padding: 1vw 2vw;
 }
 
-.ticketsBody p {
+.subSite p {
   font-size: 1.2vw;
 }
 
-.ticketsBody .button h5 {
+.subSite .button h5 {
   font-size: 1.2vw;
   white-space: nowrap;
+}
+
+#eventsContainer {
+  margin-top: 10rem;
+  row-gap: 5vw;
+  margin-bottom: 10vw;
+}
+
+.eventsBody img {
+  height: 100%;
+}
+
+#eventsContainer .default-box {
+  align-items: flex-start;
+  height: 25vw;
+}
+
+#eventsContainer .flex-default-column div {
+  margin: 2vw;
+}
+
+#eventsContainer .flex-default-column {
+  height: 100%;
+}
+
+#eventsContainer .flex-reversed-row .flex-default-column div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#eventsContainer .button {
+  align-self: flex-start;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#eventsContainer .flex-reversed-row .button {
+  align-self: flex-end;
+  margin-left: 0;
+  margin-right: 2vw;
+}
+
+.eventsBody h3 {
+  width: fit-content;
+}
+
+.eventsBody h1 {
+  height: 6vw;
+  margin-left: 6vw;
+}
+
+.nowBody .default-box {
+  margin: 2vw;
+  margin-top: 10rem;
+}
+
+.nowBody .default-box img {
+  width: 40vw;
+}
+
+.nowBody .default-box {
+  padding: 2vw;
+  align-items: flex-start;
+}
+
+.nowBody p {
+  font-size: 1.8vw;
+  margin-bottom: 2vw;
+}
+
+#toursContainer {
+  margin: 2vw;
+  margin-top: 10rem;
+}
+
+.toursBody h1 {
+  font-size: 4rem;
+}
+
+.toursBody p {
+  font-size: 2rem;
 }
 
 /**/
@@ -409,11 +498,14 @@ footer {
     width: 40%;
     height: 30rem;
   }
-  .ticketsBody h3 {
+  .subSite h3 {
     font-size: 7vw;
   }
-  .ticketsBody p {
+  .subSite p {
     font-size: 1.8vw;
+  }
+  .eventsBody .default-box {
+    height: 40vw;
   }
 }
 
@@ -497,6 +589,18 @@ footer {
   }
 }
 
+@media (max-width: 1025px) {
+  .eventsBody p {
+    font-size: 2vw;
+  }
+  .eventsBody h3 {
+    font-size: 5vw;
+  }
+  #eventsContainer .default-box {
+    height: 40vw;
+  }
+}
+
 @media (max-width: 64rem) {
   .start-grid-container {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -541,9 +645,11 @@ footer {
   .startBody p {
     font-size: 1.5rem;
   }
+
   #redefined .text {
     top: 3vw;
   }
+
   #events img {
     height: 100%;
     width: auto;
@@ -600,19 +706,19 @@ footer {
     width: 50%;
   }
 
-  .ticketsBody h3 {
+  .subSite h3 {
     font-size: 17vw;
   }
 
-  .ticketsBody .button h5 {
+  .subSite .button h5 {
     font-size: 5vw;
   }
 
-  .ticketsBody footer h5 {
+  .subSite footer h5 {
     font-size: 5vw;
   }
 
-  .ticketsBody p {
+  .subSite p {
     font-size: 5vw;
   }
 
@@ -668,6 +774,40 @@ footer {
     position: absolute;
     left: 0;
   }
+
+  #eventsContainer .default-box {
+    height: 50vw;
+  }
+
+  .eventsBody p {
+    font-size: 3vw;
+  }
+  .eventsBody h3 {
+    font-size: 5vw;
+  }
+  .eventsBody h1 {
+    font-size: 10vw;
+    position: relative;
+    bottom: 5vw;
+  }
+  .nowBody .default-box {
+    flex-direction: column;
+  }
+  .nowBody p {
+    font-size: 10vw;
+  }
+  .nowBody h1 {
+    font-size: 17vw;
+  }
+  .nowBody .default-box img {
+    width: 100%;
+  }
+  #title {
+    flex-direction: column;
+  }
+  button {
+    font-size: 6vw;
+  }
 }
 @media (max-width: 320px) {
   #now .text {
@@ -675,5 +815,21 @@ footer {
     left: 9rem;
     bottom: 1rem;
     width: 5rem;
+  }
+
+  #eventsContainer .default-box {
+    height: 90vw;
+  }
+
+  .eventsBody p {
+    font-size: 5vw;
+  }
+  .eventsBody h3 {
+    font-size: 5vw;
+  }
+  .eventsBody h1 {
+    font-size: 10vw;
+    position: relative;
+    bottom: 3vw;
   }
 }
